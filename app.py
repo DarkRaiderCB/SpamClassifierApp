@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-model_path = './models/LinSVC.joblib'
+model_path = 'LinSVC.joblib'
 model = joblib.load(model_path)
 
 
@@ -23,8 +23,8 @@ def prediction(model, test):
         return "ham"
 
 
-vectorizer = joblib.load('./models/vectorizer.joblib')
-model = joblib.load('./models/LinSVC.joblib')
+vectorizer = joblib.load('vectorizer.joblib')
+model = joblib.load('LinSVC.joblib')
 
 # Streamlit app
 st.title("SMS Spam Classifier")
